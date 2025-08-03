@@ -1,0 +1,30 @@
+
+buildscript {
+
+    repositories{
+        mavenLocal()
+        mavenCentral()
+        maven {
+            url = uri("https://artifacts-partners.sankhya.com.br/repository/maven-releases")
+        }
+    }
+
+    dependencies {
+        classpath "br.com.sankhya.studio:gradle-plugin:1+"
+    }
+}
+
+group = 'br.com.fabricante.addon'
+version="1.0.0"
+description = "DESCRICAO_PROJETO"
+
+apply(plugin: "br.com.sankhya.addonstudio")
+snkmodule {
+    serverFolder = '${WILDFLY_HOME}'
+    plataformaMinima = "4.28"
+}
+
+addon {
+    appKey="APP_KEY_INFORMADA"
+    parceiroNome = "NOME_EMPRESA"
+}

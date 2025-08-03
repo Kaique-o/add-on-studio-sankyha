@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<scripts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="../.gradle/scripts.xsd">
+    <sql nomeTabela="TPL_ATENDIMENTO" ordem="1" executar="SE_NAO_EXISTIR" tipoObjeto="TABLE" nomeObjeto="TPL_ATENDIMENTO">
+        <oracle>
+            CREATE TABLE TPL_ATENDIMENTO(
+            CODIGO INTEGER PRIMARY KEY,
+            DESCRICAO VARCHAR2(255),
+            CATEGORIA_ATENDIMENTO VARCHAR2(255),
+            CODUSU INTEGER
+            )
+        </oracle>
+        <mssql>
+            CREATE TABLE TPL_ATENDIMENTO(
+            CODIGO INT PRIMARY KEY,
+            DESCRICAO VARCHAR(255),
+            CATEGORIA_ATENDIMENTO VARCHAR(255),
+            CODUSU INT
+            )
+        </mssql>
+    </sql>
+    <sql nomeTabela="TPL_ATENDIMENTO" ordem="2" executar="SE_NAO_EXISTIR" tipoObjeto="COLUMN" nomeObjeto="DATA_CRIACAO">
+        <oracle>
+            ALTER TABLE TPL_ATENDIMENTO ADD DATA_CRIACAO TIMESTAMP
+        </oracle>
+        <mssql>
+            ALTER TABLE TPL_ATENDIMENTO ADD DATA_CRIACAO DATETIME
+        </mssql>
+    </sql>
+</scripts>

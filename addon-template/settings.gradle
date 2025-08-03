@@ -1,0 +1,3 @@
+rootProject.name = 'addon-template'
+include 'model'
+include 'vc'

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<metadados xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:noNamespaceSchemaLocation="../.gradle/metadados.xsd">
+
+    <menu id="template" description="Addon Template" icon="/$ctx/assets/icon.png">
+        <ui id="Orcamento" url="/$ctx/Orcamento.xhtml5" description="OrcamentoHtml5"/>
+        <dynamicForm instance="TMP_Atendimento" id="TMP_Atendimento"  description="Teste Addon"/>
+    </menu>
+
+
+</metadados>
